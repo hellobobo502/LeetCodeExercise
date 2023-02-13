@@ -1,2 +1,3 @@
 # LeetCodeExercise
 for exercise
+:)
