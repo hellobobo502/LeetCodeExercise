@@ -6,6 +6,9 @@ import java.util.Stack;
 
 import tools.TreeNode;
 
+/**
+ * 94.Binary Tree Inorder Traversal
+ */
 public class Q94 {
 
 	public static void main(String[] args) {
