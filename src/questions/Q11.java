@@ -16,14 +16,8 @@ public class Q11 {
 			int h = Math.min(height[x], height[y]);
 			maxArea = Math.max(maxArea, (y-x)*h);
 			
-			if(height[x] > height[y]) {
-				y--;
-			}else if(height[x] < height[y]) {
-				x++;
-			}else {
-				x++;
-				y--;
-			}
+			while(x < y && h >= height[x]) x++;
+			while(x < y && h >= height[y]) y--;
 		}
 		return maxArea;
     }
