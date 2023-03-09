@@ -34,4 +34,30 @@ public class ListNode {
 		
 		return head;
 	}
+	
+	public static int calculateLength(ListNode head) {
+		ListNode curr = head;
+
+		int cycleLength = 0;
+		do {
+			curr = curr.next;
+			cycleLength++;
+		} while (curr != null);
+
+		return cycleLength;
+	}
+
+	public static boolean hasCycle(ListNode head) {
+		ListNode slow = head;
+		ListNode fast = head;
+
+		while (fast != null && fast.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
+			if (slow == fast)
+				return true;
+		}
+
+		return false;
+	}
 }
